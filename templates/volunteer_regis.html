@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" type="text/css" href="IndividualSignup.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.ibb.co/xqf78Tb/Home.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header nav {
+      display: inline-block;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: larger;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 100;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300vh;
+      
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 90%; /* Adjusted width */
+      max-width: 500px; /* Added max-width */
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #fd8d15;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 80px;
+    }
+
+    .nav{
+      padding: 10px;
+      box-sizing: border-box;
+
+    }
+
+    .signup-form {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .form-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-heading {
+      font-size: 28px;
+      color: #000000;
+    }
+
+    .form-label {
+      font-size: 14px;
+      color: #000000;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .form-input {
+      width: calc(100% - 22px); /* Adjusted width */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .signup-button {
+      width: 100%; /* Adjusted width */
+      background-color: #000000;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-button:hover {
+      background-color: #d12600;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- <header>
+    <nav>
+      <a href="/home.html">Home</a>
+      <a href="/login.html">Login</a>
+      <a href="/signup.html">Signup</a>
+    </nav>
+  </header> -->
+
+  <div class="container">
+    <div class="content">
+      <div class="signup-form">
+        <div class="form-title">
+          <h1 class="form-heading">Create an Account</h1>
+        </div>
+        <!-- <img src="logo.png" alt="Signup illustration" height= "70%" width: 80%; margin-bottom: 20px;"> -->
+        <form>
+          <!-- Your form fields go here -->
+          <label for="Prefix" class="form-label">Prefix</label>
+          <select name="Prefix" id="Prefix" class="form-input">
+            <option value="Mr.">Mr.</option>
+            <option value="Mrs.">Mrs.</option>
+          </select>
+          <label for="first Name" class="form-label">First Name</label>
+          <input name="first Name" id="first Name" type="text" class="form-input" required> 
+
+          <label for="last Name" class="form-label">Last Name</label>
+          <input name="last Name" id="last Name" type="text" class="form-input" required>
+
+          <label for="email" class="form-label">Email</label>
+          <input type="text" id="Email" name="Email" class="form-input" placeholder="ex:jack@12" required>
+
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" name="password" class="form-input" placeholder="Enter Password" required>
+            
+          <label for="cpassword" class="form-label">Confirm Password</label>
+          <input type="password" id="cpassword" name="cpassword" class="form-input" required>
+
+          <label for="address" class="form-label">Address</label>
+          <input name="address" id="address" type="text" class="form-input" required>
+
+          <label for="city" class="form-label">City</label>
+          <input name="city" id="city" type="text" class="form-input" required>
+
+          <label for="state" class="form-label">State</label>
+          <select name="state" id="state" class="form-input" required>
+            <option value="">-select one-</option>
+            <option value="AP">AP</option>
+            <option value="AR">AR</option>
+            <!-- Add other options -->
+          </select>
+
+          <label for="postal code" class="form-label">Postal Code</label>
+          <input name="postal code" id="postal code" type="text" class="form-input" required>
+
+          <label for="dateofbirth" class="form-label">Date Of Birth</label>
+          <input name="dateofbirth" id="dateofbirth" type="date" class="form-input" required>
+
+          <label for="occupation" class="form-label">Occupation</label>
+          <select name="occupation" id="occupation" class="form-input" required>
+            <option value="">-select one-</option>
+            <option value="Student">Student</option>
+            <option value="Graduate">Graduate</option>
+            <!-- Add other options -->
+          </select>
+
+          <label for="interests" class="form-label">Interests</label>
+          <input type="checkbox" value="Environment">
+          <label>Environment</label><br>
+
+          <input type="checkbox" value="Education">
+          <label>Education</label><br>
+
+          <input type="checkbox" value="Animal Welfare">
+          <label>Animal Welfare</label><br>
+
+          <input type="checkbox" value="Healthcare">
+          <label>Healthcare</label><br>
+
+          <input type="checkbox" value="Social Services">
+          <label>Social Services</label><br>
+
+          <input type="checkbox" value="Arts And Culture">
+          <label>Arts And Culture</label><br>
+          <!-- Rest of your form fields -->  <input type="submit" value="Signup" class="signup-button">
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

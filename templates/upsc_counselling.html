@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='sample.css') }}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<style>
+  p {
+    font-size: 15px;
+    font-family: "Google Sans";
+    color: #676a6a;
+  }
+</style>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-12 col-md-3 col-lg-2 sidebar">
+        <a href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="img-fluid" />
+        </a>
+        <div class="list-group mt-3">
+          <a href="{{ url_for('jee_counselling') }}">Jee Counselling</a>
+          <a href="{{ url_for('neet_counselling') }}">Neet Counselling</a>
+          <a href="{{ url_for('upsc_counselling') }}">Upsc Counselling</a>
+ 
+        </div>
+        <!-- Logout Link -->
+        <footer class="mt-3">
+          <a href="{{ url_for('home') }}">Home</a>
+        </footer>
+      </nav>
+
+      <div class="col-lg-10 col-md-9 col-12">
+        <div class="welcome-message">
+          <h4>Welcome To the Counselling Area</h4>
+          <h3 style="color: #676a6a">UPSC</h3>
+          <div style="display: flex; gap: 20px; justify-content: center">
+            <!-- Updated Video 1 -->
+            <div class="container">
+                <img src="{{ url_for('static', filename='upsc1.png') }}" class="pic">
+            </div>
+            <div class="text-container">
+              <div class="text"><a href="https://calendar.app.google/b12NLcHBeWoC41t5A" target="_self" style="text-decoration: none; color: black;">UPSC Counselling Session 1 
+                <br>25th March 2024</br>
+            </a></div>
+            </div>
+
+            <div class="container">
+                <img src="{{ url_for('static', filename='upsc2.jpeg') }}" class="pic">
+            </div>
+            <div class="text-container">
+              <div class="text"><a href="https://calendar.app.google/8bc2RFm5NkZEVABB6" target="_self" style="text-decoration: none; color: black;">
+                UPSC Counselling Session 2 
+                <br>26th March 2024</br>
+                </a></div>
+            </div>
+
+            <div class="container">
+                <img src="{{ url_for('static', filename='upsc3.png') }}" class="pic">
+            </div>
+            <div class="text-container">
+              <div class="text"><a href="https://calendar.app.google/SL18QF93BmJt9u9S9" target="_self" style="text-decoration: none; color: black;">UPSC Counselling Session 3 
+                <br>25th March 2024</br></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

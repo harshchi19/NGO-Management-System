@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Progress Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body {
+    background: linear-gradient(90deg, orange, white);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding-top: 20px; /* Adjust as needed */
+  }
+  .graph-container {
+    flex: 1;
+    margin-right: 20px;
+    background-color: white; /* Adding a white background to the graph containers */
+    border-radius: 10px; /* Adding rounded corners */
+    padding: 20px; /* Adding some padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+  }
+  .page-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Adjust heading color */
+  }
+  .image-holder {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<h1 class="page-heading">Student Progress</h1>
+<div class="image-holder">
+  <img src="{{ url_for('static', filename='logo.png') }}" alt="Image Placeholder" width="200" height="200">
+</div>
+<div class="container">
+  <div class="graph-container">
+    <canvas id="pieChart"></canvas>
+  </div>
+  <div class="graph-container">
+    <canvas id="lineChart"></canvas>
+  </div>
+  <div class="graph-container">
+    <canvas id="barChart"></canvas>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Pie Chart
+  var pieCtx = document.getElementById('pieChart').getContext('2d');
+  var pieChart = new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Physics', 'Chemistry', 'Maths'],
+      datasets: [{
+        label: 'Product Sales',
+        data: [300, 200, 500],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+      }]
+    }
+  });
+
+  // Line Chart
+  var lineCtx = document.getElementById('lineChart').getContext('2d');
+  var lineChart = new Chart(lineCtx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May'],
+      datasets: [{
+        label: 'Marks',
+        data: [50, 80, 60, 90, 95],
+        borderColor: '#FF6384',
+        fill: false
+      }]
+    }
+  });
+
+  // Bar Chart
+  var barCtx = document.getElementById('barChart').getContext('2d');
+  var barChart = new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['2022', '2023', '2024'],
+      datasets: [{
+        label: 'Percentage',
+        data: [87, 94, 77],
+        backgroundColor: ['#FFCE56', '#36A2EB', '#FF6384']
+      }]
+    }
+  });
+});
+</script>
+</body>
+</html>
